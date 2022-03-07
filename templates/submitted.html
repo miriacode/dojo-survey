@@ -1,0 +1,36 @@
+{% extends "index.html"%}
+
+{% block main %}
+<main>
+    <h1 class="main-heading">Submitted Info</h1>
+    <article>
+        <h2>Name:</h2>
+        <h3>{{ name }}</h3>
+    </article>
+    <article>
+        <h2>Dojo Location:</h2>
+        <h3>{{ location }}</h3>
+    </article>
+    <article>
+        <h2>Favorite Language:</h2>
+        <h3>{{ fav_language }}</h3>
+    </article>
+    <article>
+        <h2>Comment:</h2>
+        <h3>{{ comment }}</h3>
+    </article>
+    <article>
+        <h2>Bootcamp:</h2>
+        <h3>{{ type_bootcamp }}</h3>
+    </article>
+    <article>
+        <h2 class="heading">Languages mastered:</h2>
+        <div class="div-list">
+            {% for i in range(0,3) %}
+                <p>{{ master_languages[i] }}</p>
+            {% endfor %} 
+        </div>
+        
+    </article>
+</main>
+{% endblock%}
